@@ -19,3 +19,11 @@ def contact(request):
 
 def about(request):
     return render(request, 'store/about.html')
+
+
+def login(request):
+    return render(request, 'store/login.html')
+
+
+def register(request):
+    return render(request, 'store/register.html')
