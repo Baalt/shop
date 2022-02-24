@@ -3,7 +3,7 @@ from django.db import models
 class Glasses(models.Model):
     title = models.CharField(max_length=50, verbose_name='Модель')
     content = models.TextField(null=True, blank=True, verbose_name='Описание')
-    price = models.FloatField(null=True, blank=True)
+    price = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     image = models.ImageField(verbose_name='Изображение', upload_to='archives/%Y/%m/%d/')
 
 
