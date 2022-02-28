@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .models import Glasses, CustomerReviews
 
 
 def index(request):
-    return render(request, 'store/index.html')
+    glasses = Glasses.objects.all()
+    reviews = CustomerReviews.objects.all()[len(CustomerReviews.objects.all()) - 3 : ]
+    return render(request, 'store/index.html', {'glasses': glasses, 'reviews': reviews})
 
 
 def shop(request):
@@ -10,7 +13,8 @@ def shop(request):
 
 
 def glasses(request):
-    return render(request, 'store/glasses.html')
+    glasses = Glasses.objects.all()
+    return render(request, 'store/glasses.html', {'glasses': glasses})
 
 
 def contact(request):

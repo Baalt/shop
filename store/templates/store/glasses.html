@@ -16,62 +16,15 @@
    </div>
    <div class="container-fluid">
       <div class="row">
+          {% for glass in glasses %}
          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
             <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass1.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
+               <figure><img src="{{ glass.image.url }}" alt="#"/></figure>
+               <h3><span class="blu">$</span>{{ glass.price }}</h3>
+               <p>{{ glass.title }}</p>
             </div>
          </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass2.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass3.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass4.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass5.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass6.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass7.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box">
-               <figure><img src="{% static 'store/images/glass8.png' %}" alt="#"/></figure>
-               <h3><span class="blu">$</span>50</h3>
-               <p>Sunglasses</p>
-            </div>
-         </div>
+          {% endfor %}
          <div class="col-md-12">
             <a class="read_more" href="#">Read More</a>
          </div>
